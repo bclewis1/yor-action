@@ -68,8 +68,7 @@ async function run(): Promise<void> {
   await exec.exec('git add .')
   await exec.exec(
     'git -c user.name=actions@github.com -c user.email="GitHub Actions" \
-    commit -m "Update tags (by Yor)" \
-    --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"'
+    commit -m "Update tags (by Yor)" '
   )
   core.info('Changes committed, pushing...')
   await exec.exec('git push origin')
